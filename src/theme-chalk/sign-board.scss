@@ -1,0 +1,22 @@
+@import './common/variables.scss';
+@import './mixins/mixins.scss';
+
+@include blockquote(sign-board) {
+  position: relative;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  display: inline-block;
+  padding: 10px;
+  &-control {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  &-canvas {
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    box-shadow: 0 2px 6px #dbdbdb;
+  }
+}

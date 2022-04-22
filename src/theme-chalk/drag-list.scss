@@ -1,0 +1,20 @@
+@import './common/variables.scss';
+@import './mixins/mixins.scss';
+
+@include blockquote(drag-list) {
+  position: relative;
+  
+  &-item {
+    cursor: pointer;
+    user-select: none;
+  }
+  .cqc-drap-inditcator {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 1px;
+    background-color: $primary;
+    display: none;
+  }
+}

@@ -1,0 +1,11 @@
+@import './common/variables.scss';
+@import './mixins/mixins.scss';
+
+@include blockquote(loading-icon) {
+  animation: cqc-loading-icon-rotate 1.5s linear infinite;
+  @keyframes cqc-loading-icon-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

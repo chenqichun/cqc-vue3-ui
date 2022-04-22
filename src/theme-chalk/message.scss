@@ -1,0 +1,51 @@
+@import './common/variables.scss';
+@import './mixins/mixins.scss';
+
+
+@include blockquote(message) {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: $font-size;
+  line-height: 24px;
+  padding: 14px;
+  max-width: 500px;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  transition: transform 0.3s ease;
+  &-success {
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+    color: #67c23a;
+    .cqc-message-icon {
+      fill: #67c23a
+    }
+  }
+  &-warn {
+    background-color: #fdf6ec;
+    border-color: #faecd8;
+    color: #e6a23c;
+    .cqc-message-icon {
+      fill: #e6a23c
+    }
+  }
+  &-error {
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+    color: #f56c6c;
+    .cqc-message-icon {
+      fill: #f56c6c
+    }
+  }
+  &-info {
+    background-color: #edf2fc;
+    border-color: #ebeef5;
+    color: #909399;
+    .cqc-message-icon {
+      fill: #909399
+    }
+  }
+  &-icon {
+    margin-right: 6px;
+  }
+}

@@ -1,0 +1,73 @@
+@import './common/variables.scss';
+@import './mixins/mixins.scss';
+
+@include blockquote(preview-img) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-content {
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+    padding: 10px 40px 20px;
+    transition: all 0.3s ease;
+  }
+  &-wrap {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  &-list {
+    height: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+  &-title {
+    text-align: center;
+    padding-bottom: 6px;
+  }
+  &-item {
+    display: inline-block;
+  }
+  &-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(110%, -110%);
+    color: rgba(255,255,255,0.7);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    &:hover {
+      color: rgba(255,255,255, 1);
+    }
+  }
+  &-btn {
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px 8px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    cursor: pointer;
+    &:hover {
+      background-color: $default-active;
+    }
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+  &-next {
+    left: initial;
+    right: 2px;
+  }
+}

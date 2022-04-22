@@ -1,0 +1,41 @@
+@import './common/variables.scss';
+@import './mixins/mixins.scss';
+
+@include blockquote(progress) {
+  position: relative;
+  width: 100%;
+  &-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: width 0.6s ease;
+  }
+  .cqc-progress-text {
+    position: absolute;
+    right: 6px;
+    font-size: $font-size;
+    color: #fff;
+    &-center {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &-top {
+      color: #606266;
+      top: 0;
+      transform: translateY(calc(-100%));
+    }
+    &-bottom {
+      color: #606266;
+      bottom: 0;
+      transform: translateY(calc(100%));
+    }
+  }
+  .cqc-track-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #606266;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,10 @@
+src
+public
+tests
+node_modules
+karma.conf.js
+.gitignore
+.eslintrc.js
+.eslintignore
+.editorconfig
+vue.config.js

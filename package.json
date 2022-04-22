@@ -1,0 +1,59 @@
+{
+  "name": "cqc-vue3-ui",
+  "version": "1.0.0",
+  "private": false,
+  "main": "./dist/cqc-vue3-ui.umd.min.js",
+  "author": "chenqichun<1069012191@qq.com>",
+  "license": "ISC",
+  "keywords": [
+    "vue3",
+    "ui",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenqichun/cqc-vue3-ui.git"
+  },
+  "description": "the ui lib of vue3",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name cqc-vue3-ui ./src/packages/index.js && vue-cli-service build --all --no-clean",
+    "build:docs": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "karma start",
+    "rp": "rollup -c ./rollup/rollup.config.js"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "highlight.js": "^11.5.1",
+    "rollup-plugin-css-porter": "^1.0.2",
+    "save-dev": "^0.0.1-security",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "chai": "^4.3.6",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "karma": "^6.3.18",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-mocha": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.8",
+    "karma-spec-reporter": "0.0.34",
+    "karma-webpack": "^5.0.0",
+    "mocha": "^9.2.2",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0"
+  }
+}

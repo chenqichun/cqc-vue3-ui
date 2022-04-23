@@ -1,8 +1,0 @@
-@import './common/variables.scss';
-@import './mixins/mixins.scss';
-
-@include blockquote(icon) {
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
-}

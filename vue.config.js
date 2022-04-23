@@ -17,12 +17,12 @@ const getEntries = (dir) => {
 }
 if (process.env.NODE_ENV === 'production' && args.includes('lib')) {
   module.exports = {
+    outputDir: 'libUI',
     productionSourceMap: false
   }
-}
-if (process.env.NODE_ENV === 'production' && args.includes('--all')) {
+} else if (process.env.NODE_ENV === 'production' && args.includes('--all')) {
   module.exports = {
-    outputDir: 'dist',
+    outputDir: 'libUI',
     productionSourceMap: false,
     configureWebpack: {
       entry: {
@@ -58,5 +58,11 @@ if (process.env.NODE_ENV === 'production' && args.includes('--all')) {
       config.plugins.delete('hmr')
       config.entryPoints.delete('app')
     }
+  }
+} else {
+  module.exports = {
+    publicPath: '/lib/vue3-ui-docs/',
+    outputDir: 'docs',
+    productionSourceMap: false
   }
 }

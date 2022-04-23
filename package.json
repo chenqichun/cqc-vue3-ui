@@ -1,8 +1,8 @@
 {
   "name": "cqc-vue3-ui",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": false,
-  "main": "./dist/cqc-vue3-ui.umd.min.js",
+  "main": "./libUI/cqc-vue3-ui.umd.min.js",
   "author": "chenqichun<1069012191@qq.com>",
   "license": "ISC",
   "keywords": [

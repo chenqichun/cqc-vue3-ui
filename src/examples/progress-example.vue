@@ -6,7 +6,7 @@
       :content="content1"
     >
       <template v-slot:descript>
-        <cqc-icon icon="tishi" style="color: #E6A23C"></cqc-icon>
+        <i class="cqc-icon-tishi" style="color: #E6A23C"></i>
         进度条没有设置长度， 默认继承父元素的长度，所以你需要用一个标签把它包起来
         （type为circle,dashboard的圆形进度条不受父元素控制）
       </template>

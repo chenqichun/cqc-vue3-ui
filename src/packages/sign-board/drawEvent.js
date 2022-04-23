@@ -1,7 +1,7 @@
 import PreviewImg from '../preview-img';
 import { nextTick, onMounted } from 'vue'
 
-export default function drawEvents(props, canvasRef, emit) {
+export default function drawEvents(props, canvasRef) {
   let flag = true;
   let cavClientLeft, cavClientTop, canvas, ctx;
   const { lineWidth, strokeStyle, lineCap, lineDash, doubleLine, miniType, canvasBg, width, height } = props
@@ -45,9 +45,8 @@ export default function drawEvents(props, canvasRef, emit) {
     const baseImg = canvasRef.value.toDataURL(miniType);
     PreviewImg([baseImg])
   }
-  function confirm() {
-    const baseImg = canvasRef.value.toDataURL(miniType);
-    emit('confirm', baseImg)
+  function getData() {
+    return canvasRef.value.toDataURL(miniType);
   }
 
   function onmousedown(e) {
@@ -80,6 +79,6 @@ export default function drawEvents(props, canvasRef, emit) {
   return {
     clear,
     preview,
-    confirm
+    getData
   }
 }

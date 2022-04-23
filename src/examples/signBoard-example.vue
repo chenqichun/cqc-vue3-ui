@@ -11,11 +11,12 @@
       <cqc-sign-board
         :lineWidth="10"
         strokeStyle="red"
-        @confirm="handleData"
+        @getData="handleData"
       />
     </template>
   </DemoBlock>
   <ArbBlock :data="list"/>
+  <ArbBlock title="方法" :data="list2"/>
 </template>
 
 <script>
@@ -27,7 +28,7 @@ export default {
     <cqc-sign-board
       :lineWidth="10"
       strokeStyle="red"
-      @confirm="handleData"
+      @getData="handleData"
     />
 
     <script>
@@ -60,9 +61,13 @@ export default {
       { prop: 'miniType', msg: '导出图片格式', type: 'string', range: 'miniType', default: 'image/png' },
       { prop: 'canvasBg', msg: '画板的背景色,不设置则为透明底', type: 'string/booean', range: '-', default: 'false' }
     ]
+    const list2 = ref([
+      { prop: 'getData', msg: '获取画板的数据，为base64的图片', type: '', range: '', default: '' }
+    ])
     return {
       list,
       handleData,
+      list2,
       content1
     }
   }

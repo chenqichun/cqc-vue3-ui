@@ -3,20 +3,29 @@
     <header>
       <div class="title">cqc-vue3-ui</div>
       <div class="right">
-        <span>关于</span>
-        <span>联系我</span>
+        <span>
+          <router-link to="/about">关于</router-link>
+        </span>
+        <span>
+          <a href="https://github.com/chenqichun/cqc-vue3-ui.git" target="_blank">
+            GitHub
+            <i class="cqc-icon-fenxiang"></i>
+          </a>
+        </span>
       </div>
     </header>
     <aside>
-      <router-link
-        class="aside-item"
-        :class="{active: currpath === router.path}"
-        v-for="router in routes" :key="router.path"
-        :to="router.path"
-      >
-        {{ router.meta.title }}
-        <cqc-icon icon="right"></cqc-icon>
-      </router-link>
+      <template v-for="router in routes" :key="router.path">
+        <router-link
+          v-if="!router.meta.hide"
+          class="aside-item"
+          :class="{active: currpath === router.path}"
+          :to="router.path"
+        >
+          {{ router.meta.title }}
+          <i class="cqc-icon-right cqc-icon"></i>
+        </router-link>
+      </template>
     </aside>
     <main>
       <router-view />
@@ -44,8 +53,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  text-decoration: none;
+}
 $color: #2c3e50;
 $color-hover: #3eaf7c;
+.router-link-active {
+  border-color: $color-hover;
+  color: $color-hover !important;
+}
 .layout {
   color: $color;
   header {
@@ -78,7 +94,7 @@ $color-hover: #3eaf7c;
         line-height: 28px;
         cursor: pointer;
         border-bottom: 2px solid transparent;
-        &:hover {
+        &:hover, &:hover a {
           border-color: $color-hover;
           color: $color-hover;
         }
@@ -130,7 +146,7 @@ $color-hover: #3eaf7c;
     right: 0;
     bottom: 0;
     box-sizing: border-box;
-    padding: 50px;
+    padding: 30px 50px;
     overflow-y: auto;
   }
 }

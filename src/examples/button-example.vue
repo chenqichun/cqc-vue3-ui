@@ -20,8 +20,8 @@
     >
       <template v-slot:example>
         <cqc-button type="primary" :loading="true">主要按钮</cqc-button>
-        <cqc-button type="danger" icon="tishi">危险</cqc-button>
-        <cqc-button type="success" icon="dagou1" position="right">成功</cqc-button>
+        <cqc-button type="danger" icon="cqc-icon-tishi">危险</cqc-button>
+        <cqc-button type="success" icon="cqc-icon-dagou1" position="right">成功</cqc-button>
       </template>
     </DemoBlock>
 
@@ -41,9 +41,9 @@
     >
       <template v-slot:example>
         <cqc-button-group>
-          <cqc-button type="primary" icon="left">上一页</cqc-button>
+          <cqc-button type="primary" icon="cqc-icon-left">上一页</cqc-button>
           <cqc-button type="primary">1</cqc-button>
-          <cqc-button type="primary" icon="right" position="right">下一页</cqc-button>
+          <cqc-button type="primary" icon="cqc-icon-right" position="right">下一页</cqc-button>
         </cqc-button-group>
       </template>
     </DemoBlock>
@@ -77,8 +77,8 @@ export default {
     `
     state.content2 = `
     <cqc-button type="primary" :loading="true">主要按钮</cqc-button>
-    <cqc-button type="danger" icon="tishi">危险</cqc-button>
-    <cqc-button type="success" icon="dagou1" position="right">成功</cqc-button>
+    <cqc-button type="danger" icon="cqc-icon-tishi">危险</cqc-button>
+    <cqc-button type="success" icon="cqc-icon-dagou1" position="right">成功</cqc-button>
     
     <script>
     </\script>
@@ -92,9 +92,9 @@ export default {
     `
     state.content4 = `
     <cqc-button-group>
-      <cqc-button type="primary" icon="left">上一页</cqc-button>
+      <cqc-button type="primary" icon="cqc-icon-left">上一页</cqc-button>
       <cqc-button type="primary">1</cqc-button>
-      <cqc-button type="primary" icon="right" position="right">下一页</cqc-button>
+      <cqc-button type="primary" icon="cqc-icon-right" position="right">下一页</cqc-button>
     </cqc-button-group>
 
     <script>

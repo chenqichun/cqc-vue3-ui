@@ -1,11 +1,7 @@
 import { computed, onMounted, reactive } from 'vue'
-import Icon from '@/packages/icon'
 
 export default {
   name: 'CqcMessage',
-  components: {
-    Icon
-  },
   props: {
     type: {
       type: String,
@@ -38,16 +34,16 @@ export default {
       let type = '';
       switch (props.type) {
           case 'success':
-            type = 'xuanzhongdizhi'
+            type = 'cqc-icon-xuanzhongdizhi'
             break;
           case 'error':
-            type = 'guanbi2'
+            type = 'cqc-icon-guanbi2'
             break;
           case 'warn':
-            type = 'tishi'
+            type = 'cqc-icon-tishi'
             break;
           case 'info':
-            type = 'tishi'
+            type = 'cqc-icon-tishi'
             break;
       }
       return type
@@ -67,7 +63,7 @@ export default {
     })
     return () => (
       <div class={classes} style={style}>
-        <Icon icon={icon.value} class="cqc-message-icon" />
+        <i class={`cqc-message-icon ${icon.value}`} />
         {props.msg}
       </div>
     )

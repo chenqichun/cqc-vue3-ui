@@ -10,10 +10,10 @@ function Message(msg, opts) {
   const container = document.createElement('div');
   const app = createApp(MessageComponent, { msg, type: opts.type, zIndex, top });
   top += 64
-  app.mount(container)
+  const instance = app.mount(container)
   document.body.appendChild(container)
   setTimeout(() => {
-    app._instance.exposed.destroyFn(() => {
+    instance.destroyFn(() => {
       top -= 64
       app.unmount()
       document.body.removeChild(container)

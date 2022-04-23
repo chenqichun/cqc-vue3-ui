@@ -1,11 +1,11 @@
-import { computed, getCurrentInstance, nextTick, onMounted, reactive, toRefs, watch } from 'vue'
+import { computed, nextTick, onMounted, reactive, toRefs, watch, ref } from 'vue'
 import getComputed from './compute'
 import props from './props'
 export default {
   name: 'CqcProgress',
   props,
   setup(props, { slots }) {
-    const instance = getCurrentInstance()
+    const instanceRef = ref(null)
     const { percentage } = toRefs(props)
 
     let _width = 0;
@@ -38,13 +38,15 @@ export default {
     watch(percentage, val => changeWidth(val))
     onMounted(() => {
       nextTick(() => {
-        _width = instance.ctx.$el.clientWidth;
-        changeWidth(percentage.value)
+        if (instanceRef.value) {
+          _width = instanceRef.value.clientWidth;
+          changeWidth(percentage.value)
+        }
       })
     })
     return () => {
       if (props.type === 'line') {
-        return (<div class="cqc-progress" style={styles}>
+        return (<div class="cqc-progress" style={styles} ref={instanceRef}>
           <div class="cqc-progress-bar" style={barStyles}>
             {props.showText && (<div class={textClass.value}>
               {slots.default ? slots.default() : props.percentage + '%'}

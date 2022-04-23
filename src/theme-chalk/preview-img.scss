@@ -43,9 +43,9 @@
     top: 0;
     transform: translate(110%, -110%);
     color: rgba(255,255,255,0.7);
-    width: 30px;
-    height: 30px;
+    font-size: 30px !important;
     cursor: pointer;
+    user-select: none;
     &:hover {
       color: rgba(255,255,255, 1);
     }

@@ -13,10 +13,12 @@ export default {
     const canvasRef = ref(null)
     const {
       clear,
-      confirm,
+      getData,
       preview
     } = drawEvents(props, canvasRef, emit)
-
+    const confirm = () => {
+      emit('getData', getData())
+    }
     return () => (
       <div class="cqc-sign-board">
         <canvas

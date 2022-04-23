@@ -1,5 +1,4 @@
-import './icon/font-icon.js'
-import Icon from './icon/index.js'
+import './base/index.js';
 import LoadingIcon from './loading-icon/index.js'
 import Button from './button/index.js'
 import ButtonGroup from './button-group/index.js'
@@ -12,7 +11,6 @@ import PreviewImg from './preview-img/index.js'
 import SignBoard from './sign-board/index.js'
 
 const plugins = [
-  Icon,
   LoadingIcon,
   Button,
   ButtonGroup,
@@ -31,7 +29,6 @@ export default {
 }
 
 export {
-  Icon,
   LoadingIcon,
   Button,
   ButtonGroup,

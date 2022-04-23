@@ -12,20 +12,20 @@
           </template>
         </div>
       </div>
-      <Icon icon="guanbi1" class="cqc-preview-img-close" @click.stop="handleClose"></Icon>
+      <i  class="cqc-preview-img-close cqc-icon-guanbi1" @click.stop="handleClose"></i>
       <button
         class="cqc-preview-img-btn cqc-preview-img-prev"
         @click.stop="handleChangeIndex(current+1)"
         :disabled="(current === imgArr.length - 1) || imgArr.length === 0"
       >
-        <Icon icon="left"></Icon>
+        <i class="cqc-icon-left"></i>
       </button>
       <button
         class="cqc-preview-img-btn cqc-preview-img-next"
         @click.stop="handleChangeIndex(current-1)"
         :disabled="(current === 0) || imgArr.length === 0"
        >
-        <Icon icon="right"></Icon>
+        <i class="cqc-icon-right"></i>
       </button>
     </div>
   </div>
@@ -33,14 +33,10 @@
 
 <script>
 import { onMounted, reactive, toRefs } from 'vue'
-import Icon from '../icon'
 import props from './props'
 export default {
   name: 'CqcPreviewImg',
   props,
-  components: {
-    Icon
-  },
   setup(props) {
     const state = reactive({
       height: props.height,

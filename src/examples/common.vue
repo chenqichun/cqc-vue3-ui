@@ -16,7 +16,7 @@
         <span class="copy" @click="handleCopy">复制</span>
       </pre>
       <div class="bottom" @click="handleShow">
-        <cqc-icon :icon="show? 'arrow-up' : 'xiasanjiao'"></cqc-icon>{{show ? '收起代码' : '展开代码' }}
+        <i :class="[show? 'cqc-icon-arrow-up' : 'cqc-icon-xiasanjiao', 'cqc-icon']"></i>{{show ? '收起代码' : '展开代码' }}
       </div>
     </div>
   </div>

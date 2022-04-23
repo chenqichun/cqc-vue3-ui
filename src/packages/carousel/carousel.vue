@@ -17,10 +17,10 @@
     </div>
     <template v-if="showBtn">
       <div class="cqc-carousel-prev-btn">
-        <Button icon="shuangjiantou-zuo" @click="go(currentSelected - 1, true)" />
+        <Button icon="cqc-icon-shuangjiantou-zuo" @click="go(currentSelected - 1, true)" />
       </div>
       <div class="cqc-carousel-next-btn">
-        <Button icon="shuangjiantou-you" @click="go(currentSelected + 1, true)" />
+        <Button icon="cqc-icon-shuangjiantou-you" @click="go(currentSelected + 1, true)" />
       </div>
     </template>
   </div>

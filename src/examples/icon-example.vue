@@ -7,21 +7,19 @@
     >
       <template v-slot:example>
         <div class="icon-test">
-          <cqc-icon icon="yuyue"></cqc-icon>
-          <cqc-icon icon="youhuiquan"></cqc-icon>
-          <cqc-icon icon="loading1"></cqc-icon>
+          <i class="cqc-icon-yuyue"></i>
+          <i class="cqc-icon-youhuiquan"></i>
+          <i class="cqc-icon-loading1"></i>
         </div>
       </template>
       <template v-slot:descript>
-        先引入Icon组件，就可以使用拉
-        <p style="color:red; opacity:0.9">(注: 虽然icon是svg格式的，但是已经把fill属性值都改成currentColor了，所以可以通过color来修改颜色，如 style="color:red")</p>
+        直接class="xxx"图标类名就可以拉
       </template>
     </DemoBlock>
-    <ArbBlock :data="list"/>
     <h3>图标集合</h3>
     <div class="icon-group">
       <div class="icon-group-item" v-for="item in iconList" :key="item">
-        <cqc-icon :icon="item"></cqc-icon>
+        <i :class="item"></i>
         <span>{{ item }}</span>
       </div>
     </div>
@@ -33,9 +31,9 @@ import { ref } from 'vue';
 export default {
   setup() {
     const content1 = `
-    <cqc-icon icon="yuyue"></cqc-icon>
-    <cqc-icon icon="youhuiquan"></cqc-icon>
-    <cqc-icon icon="loading1"></cqc-icon>
+    <i class="cqc-icon-yuyue"></i>
+    <i class="cqc-icon-youhuiquan"></i>
+    <i class="cqc-icon-loading1"></i>
 
     <script>
       import { CqcIcon } from 'cqc-vue3-ui'
@@ -48,26 +46,21 @@ export default {
     `;
 
     const iconList = ref(null)
-    const list = ref([])
-    list.value = [
-      { prop: 'icon', msg: '图标名字', type: 'string', range: '-', default: '-' }
-    ]
     iconList.value = [
-      'rili', 'shuangjiantou-zuo', 'shuangjiantou-you', 'gouwuche', 'daifukuan1',
-      'daifahuo', 'danju', 'left', 'more', 'tuikuan', 'location', 'daipingjia',
-      'icon-'
+      'cqc-icon-rili', 'cqc-icon-shuangjiantou-zuo', 'cqc-icon-shuangjiantou-you', 'cqc-icon-gouwuche', 'cqc-icon-daifukuan1',
+      'cqc-icon-daifahuo', 'cqc-icon-danju', 'cqc-icon-left', 'cqc-icon-more', 'cqc-icon-tuikuan', 'cqc-icon-location', 'cqc-icon-daipingjia',
+      'cqc-icon-icon-'
     ]
     return {
       content1,
-      iconList,
-      list
+      iconList
     }
   }
 }
 </script>
 <style lang="scss" scoped>
 .icon-test {
-  .cqc-icon {
+  .i {
     margin-right: 20px;
   }
 }

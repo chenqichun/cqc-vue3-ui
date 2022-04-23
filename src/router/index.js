@@ -5,7 +5,20 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Layout,
+    redirect: '/introduce',
     children: [
+      {
+        path: '/introduce',
+        meta: { title: '快速上手' },
+        name: 'Introduce',
+        component: () => import('@/examples/introduce')
+      },
+      {
+        path: '/about',
+        meta: { title: '关于', hide: true },
+        name: 'About',
+        component: () => import('@/examples/about')
+      },
       {
         path: '/icon',
         meta: { title: '图标' },
@@ -53,12 +66,23 @@ const routes = [
         name: 'SignBoard',
         meta: { title: '画板' },
         component: () => import('@/examples/signBoard-example')
+      },
+      {
+        path: '/waitting',
+        name: 'Waitting',
+        meta: { title: '未完待续...' },
+        component: () => import('@/examples/watting')
       }
     ]
   }
 ]
 export { routes }
-export default createRouter({
+const router = createRouter({
   routes,
   history: createWebHashHistory(process.env.BASE_URL)
 })
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'cqc-vue3-ui'
+  next()
+})
+export default router

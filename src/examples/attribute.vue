@@ -1,6 +1,6 @@
 <template>
   <div class="attribute">
-    <h3>属性</h3>
+    <h3>{{title}}</h3>
     <table>
       <thead>
         <tr>
@@ -27,6 +27,10 @@
 <script>
 export default {
   props: {
+    title: {
+      type: String,
+      default: '属性'
+    },
     data: Array
   }
 }

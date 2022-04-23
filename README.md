@@ -1,5 +1,5 @@
 ## cqc-vue3-ui
-
+[![npm version](https://badge.fury.io/js/cqc-vue3-ui.svg)](https://badge.fury.io/js/cqc-vue3-ui)
 ## QuickStart
 ```bash
 npm install cqc-vue3-ui

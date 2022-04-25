@@ -35,14 +35,6 @@ export default {
     <i class="cqc-icon-youhuiquan"></i>
     <i class="cqc-icon-loading1"></i>
 
-    <script>
-      import { CqcIcon } from 'cqc-vue3-ui'
-      export default {
-        components: {
-          CqcIcon
-        }
-      }
-    <\/script>
     `;
 
     const iconList = ref(null)

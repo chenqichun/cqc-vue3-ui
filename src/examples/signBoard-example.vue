@@ -32,7 +32,6 @@ export default {
     />
 
     <script>
-      import { CqcSignBoard } from 'cqc-vue3-ui'
       export default {
         setup() {
           const handleData = data => {

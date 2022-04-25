@@ -68,27 +68,18 @@ export default {
     <cqc-button type="success">成功</cqc-button>
     <cqc-button type="info">信息</cqc-button>
 
-    <script>
-      import { CqcButton } from 'cqc-vue3-ui'
-      components: {
-        CqcButton
-      }
-    </\script>
     `
     state.content2 = `
     <cqc-button type="primary" :loading="true">主要按钮</cqc-button>
     <cqc-button type="danger" icon="cqc-icon-tishi">危险</cqc-button>
     <cqc-button type="success" icon="cqc-icon-dagou1" position="right">成功</cqc-button>
     
-    <script>
-    </\script>
+
     `
     state.content3 = `
     <cqc-button type="primary" :shadow="true">主要按钮</cqc-button>
     <cqc-button type="danger" shadow="3px 3px 15px red">危险</cqc-button>
 
-    <script>
-    </\script>
     `
     state.content4 = `
     <cqc-button-group>
@@ -97,15 +88,6 @@ export default {
       <cqc-button type="primary" icon="cqc-icon-right" position="right">下一页</cqc-button>
     </cqc-button-group>
 
-    <script>
-      import { CqcButtonGroup, CqcButton } from 'cqc-vue3-ui'
-      export default {
-        components: {
-          CqcButtonGroup,
-          CqcButton
-        }
-      }
-    </\script>
     `
     const list = ref([])
     list.value = [

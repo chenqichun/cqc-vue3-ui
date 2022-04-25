@@ -102,9 +102,6 @@ export default {
         <cqc-progress :percentage="50" :strokeWidth="20"></cqc-progress>
       </div>
 
-      <script>
-        import { CqcProgress } from 'cqc-vue3-ui'
-      <\/script>
       `,
       content2: `
       <div style="width: 350px">

@@ -53,12 +53,7 @@ export default {
 
     <script>
     import { ref } from 'vue'
-    import { CqcCarousel, CqcCarouselItem } from 'cqc-vue3-ui'
     export default {
-      components: {
-        CqcCarousel,
-        CqcCarouselItem
-      },
       setup() {
         const count = ref(0)
         count.value = ['blue', 'red', 'yellow']

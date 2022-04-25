@@ -62,7 +62,6 @@ export default {
 
       <script>
         import { reactive, toRefs } from 'vue'
-        import { CqcDragList } from 'cqc-vue3-ui'
         setup() {
           const state = reactive({
             data: [

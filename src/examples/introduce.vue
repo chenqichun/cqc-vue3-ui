@@ -2,6 +2,12 @@
   <div class="introduce">
     <h1>介绍</h1>
     <p class="description">cqc-vue3-ui是一个基于vue3开发的pc端ui库</p>
+    <p>
+      <a target="_blank" href="http://www.chenqichun.com/lib/vue3-mui-docs">cqc-vue3-mui -  vue3的移动端版本</a>
+    </p>
+    <p>
+      <a target="_blank" href="http://www.chenqichun.com/lib/vue2-ui-docs">cqc-vue2-ui -  vue2的pc端版本</a>
+    </p>
     <br>
     <br>
     <h1>安装</h1>
@@ -111,7 +117,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+a {
+  color: #3eaf7c;
+  text-decoration: none;
+  font-weight: 500;
+}
 .description {
   color: #2c3e50;;
   font-size: 16px;

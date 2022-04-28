@@ -55,6 +55,7 @@ export default {
 <style lang="scss" scoped>
 a {
   text-decoration: none;
+  color: #3eaf7c;
 }
 $color: #2c3e50;
 $color-hover: #3eaf7c;
